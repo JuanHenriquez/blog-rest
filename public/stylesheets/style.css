@@ -1,0 +1,13 @@
+body {
+	padding-top: 7em;
+}
+
+/* Header Styles */
+.ui.menu {
+	top: 0;
+	left: 0;
+}
+
+.ui.menu .icon.code {
+	font-size: 1.5em;
+}

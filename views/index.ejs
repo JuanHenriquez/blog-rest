@@ -1,0 +1,31 @@
+<% include ./partials/header %>
+
+<div class="ui container very padded segment teal">
+	<h1>Welcome to Blog Rest!</h1>
+	<div class="ui three column grid">
+		<% if(blogs.length == 0){ %>
+			<h3>The Blog no have post</h3>
+		<% } else { %>
+			<% blogs.forEach(function(blog) { %>
+				<div class=" four wide column">
+					<div class="ui card">
+						<div class="image">
+							<img src="<%= blog.image %>">
+						</div>
+						<div class="content">
+							<a class="header" href="/blogs/<%= blog._id %>"><%= blog.title %></a>
+							<div class="meta">
+								<span class="date"><%= blog.created.toDateString() %></span>
+							</div>
+							<div class="description"><%- blog.body.substring(0, 100) %>...</div>
+						</div>
+						<div class="extra content">
+							<a class="ui right labeled icon teal basic button" href="/blogs/<%= blog._id %>"><i class="right arrow icon"></i>See More</a>
+						</div>
+					</div>
+				</div>
+			<% }); %>
+		<% } %>
+	</div>
+</div>
+<% include ./partials/footer %>

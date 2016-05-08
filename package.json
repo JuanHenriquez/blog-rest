@@ -1,0 +1,27 @@
+{
+  "name": "blog-rest",
+  "version": "1.0.0",
+  "description": "Web application made with Express.js following the RESTful routes patterns to mapping HTTP methods with routes.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://JuanHenriquez:Juan04091996@github.com/JuanHenriquez/blog-rest.git"
+  },
+  "author": "Juan Henriquez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuanHenriquez/blog-rest/issues"
+  },
+  "homepage": "https://github.com/JuanHenriquez/blog-rest#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-sanitizer": "^1.0.1",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.15"
+  }
+}

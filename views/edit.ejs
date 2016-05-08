@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment very padded teal">
+	<h5 class="ui huge header teal">
+		<i class="icon write"></i>
+		<div class="content">Edit<div class="sub header">Edit the post.</div></div>
+	</h5>
+	<form action="/blogs/<%= blog._id %>?_method=PUT" method="POST" class="ui form">
+		<div class="field">
+			<label>Post Title</label>
+			<input type="text" name="blog[title]" placeholder="Title:" value="<%= blog.title %>" />
+		</div>
+		<div class="field">
+		<label>Image</label>
+			<input type="text" name="blog[image]" placeholder="Image: " value="<%= blog.image %>" />
+		</div>
+		<div class="field">
+			<label>Post Description</label>
+			<textarea name="blog[body]" placeholder="Post description: "><%= blog.body %></textarea>
+		</div>
+		<button class="ui right labeled icon teal basic button"><i class="right arrow icon"></i>Update Post</button>
+	</form>
+</div>
+
+<% include ./partials/footer %>

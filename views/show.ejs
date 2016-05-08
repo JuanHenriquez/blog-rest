@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+
+	<div class="ui container segment very padded teal">
+		<div class="ui grid">
+			<div class="row">
+				<div class="six wide column">
+					<img src="<%= blog.image %>" alt="Picture"/>
+					<form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+						<div class="grid ui">
+							<div class="eight wide column">
+								<button class="ui right labeled icon red basic button"><i class="trash icon"></i>Delete Post</button>
+							</div>
+							<div class="eight wide column">
+								<a href="/blogs/<%= blog._id %>/edit" class="ui right labeled icon yellow basic button"><i class="refresh icon"></i>Update Post</a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="ten wide column">
+					<h5 class="ui huge header teal">
+						<div class="content"><%= blog.title %><div class="sub header"><%= blog.created.toDateString() %></div></div>
+					</h5>
+					<p><%- blog.body %></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<% include ./partials/footer %>
